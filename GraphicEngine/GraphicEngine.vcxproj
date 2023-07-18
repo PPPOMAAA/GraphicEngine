@@ -148,10 +148,20 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp" />
-    <ClCompile Include="Math.cpp" />
+    <ClCompile Include="Math\math2.cpp" />
+    <ClCompile Include="Math\math3.cpp" />
+    <ClCompile Include="Math\math4.cpp" />
+    <ClCompile Include="Math\vec2.cpp" />
+    <ClCompile Include="Math\vec3.cpp" />
+    <ClCompile Include="Math\vec4.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Math.h" />
+    <ClInclude Include="Math\math2.h" />
+    <ClInclude Include="Math\math3.h" />
+    <ClInclude Include="Math\math4.h" />
+    <ClInclude Include="Math\vec2.h" />
+    <ClInclude Include="Math\vec3.h" />
+    <ClInclude Include="Math\vec4.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
