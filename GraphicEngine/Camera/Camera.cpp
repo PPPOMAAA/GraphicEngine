@@ -19,6 +19,15 @@ math4 Class_camera::GetViewMatrix() {
 	return view.LookAt(cameraPos, cameraPos + cameraFront, cameraUp);
 }
 
+math4 Class_camera::GetRightView() {
+	math4 view = GetViewMatrix();
+	view.matrix[3][0] = 0;
+	view.matrix[3][1] = 0;
+	view.matrix[3][2] = 0;
+	view.matrix[3][3] = 0;
+	return view;
+}
+
 void Class_camera::KeyboardInput() {
 	if (sf::Keyboard::isKeyPressed(sf::Keyboard::W)) {
 		cameraPos += cameraFront * cameraSpeed;

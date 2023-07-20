@@ -14,6 +14,7 @@ public:
 	Class_camera();
 	math4 GetProjectionMatrix();
 	math4 GetViewMatrix();
+	math4 GetRightView();
 	void KeyboardInput();
 	void MouseInput(sf::Window&);
 	vec3 GetPos();

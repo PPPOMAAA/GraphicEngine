@@ -10,6 +10,7 @@
 #include "math/vec3.h"
 
 #include "Camera/Camera.h"
+#include "Camera/Skybox.h"
 #include "OpenGLWrappers/Texture.h"
 #include "OpenGLWrappers/shaderLoader.h"
 #include "stb/stb_image.h"
@@ -53,6 +54,20 @@ int main() {
 
 	Shader cube("shaders/texture.vs", "shaders/texture.fs");
 	Shader light("shaders/point.vs", "shaders/point.fs");
+	Shader skybox_shader("shaders/skybox.vs", "shaders/skybox.fs");
+
+	std::vector<std::string> faces{
+		"textures/panorama_0.png",
+		"textures/panorama_1.png",
+		"textures/panorama_2.png",
+		"textures/panorama_3.png",
+		"textures/panorama_4.png",
+		"textures/panorama_5.png"
+	};
+
+	Texture sky(faces);
+	Skybox skybox;
+	skybox.Setup(skybox_shader);
 
 	float vertices[] = {
 		-0.5f, -0.5f, -0.5f,  0.0f,  0.0f, -1.0f, 0.0f, 0.0f,
@@ -142,6 +157,8 @@ int main() {
 
 		glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
 		glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+
+		skybox.Draw(skybox_shader, camera);
 
 		cube.Use();
 		cube.SetVec3("viewPos", camera.GetPos());

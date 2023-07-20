@@ -148,6 +148,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Camera\Camera.cpp" />
+    <ClCompile Include="Camera\Skybox.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="Math\math2.cpp" />
     <ClCompile Include="Math\math3.cpp" />
@@ -163,6 +164,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Camera\Camera.h" />
+    <ClInclude Include="Camera\Skybox.h" />
     <ClInclude Include="Math\math2.h" />
     <ClInclude Include="Math\math3.h" />
     <ClInclude Include="Math\math4.h" />
@@ -179,6 +181,8 @@
   <ItemGroup>
     <None Include="shaders\point.fs" />
     <None Include="shaders\point.vs" />
+    <None Include="shaders\skybox.fs" />
+    <None Include="shaders\skybox.vs" />
     <None Include="shaders\texture.fs" />
     <None Include="shaders\texture.vs" />
     <None Include="shader_directional\directional.fs" />
@@ -191,6 +195,12 @@
   <ItemGroup>
     <Image Include="textures\CAPYBARA.png" />
     <Image Include="textures\CAPYBARAS.png" />
+    <Image Include="textures\panorama_0.png" />
+    <Image Include="textures\panorama_1.png" />
+    <Image Include="textures\panorama_2.png" />
+    <Image Include="textures\panorama_3.png" />
+    <Image Include="textures\panorama_4.png" />
+    <Image Include="textures\panorama_5.png" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

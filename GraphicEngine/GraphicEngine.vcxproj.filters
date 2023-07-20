@@ -54,6 +54,9 @@
     <ClCompile Include="stb\stb_image.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
+    <ClCompile Include="Camera\Skybox.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Math\math2.h">
@@ -95,6 +98,9 @@
     <ClInclude Include="stb\stb_image.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
+    <ClInclude Include="Camera\Skybox.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="shader_directional\directional.fs" />
@@ -107,12 +113,32 @@
     <None Include="shaders\point.vs" />
     <None Include="shaders\texture.fs" />
     <None Include="shaders\texture.vs" />
+    <None Include="shaders\skybox.fs" />
+    <None Include="shaders\skybox.vs" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="textures\CAPYBARAS.png">
       <Filter>Файлы ресурсов</Filter>
     </Image>
     <Image Include="textures\CAPYBARA.png">
+      <Filter>Файлы ресурсов</Filter>
+    </Image>
+    <Image Include="textures\panorama_0.png">
+      <Filter>Файлы ресурсов</Filter>
+    </Image>
+    <Image Include="textures\panorama_1.png">
+      <Filter>Файлы ресурсов</Filter>
+    </Image>
+    <Image Include="textures\panorama_2.png">
+      <Filter>Файлы ресурсов</Filter>
+    </Image>
+    <Image Include="textures\panorama_3.png">
+      <Filter>Файлы ресурсов</Filter>
+    </Image>
+    <Image Include="textures\panorama_4.png">
+      <Filter>Файлы ресурсов</Filter>
+    </Image>
+    <Image Include="textures\panorama_5.png">
       <Filter>Файлы ресурсов</Filter>
     </Image>
   </ItemGroup>
