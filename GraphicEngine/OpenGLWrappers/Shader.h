@@ -30,6 +30,9 @@ public:
 	void SetFloat(const std::string unif, float data) {
 		glUniform1f(glGetUniformLocation(id, unif.c_str()), data);
 	}
+	unsigned int GetShader() {
+		return id;
+	}
 
 private:
 	unsigned int id;

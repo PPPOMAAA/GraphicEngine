@@ -13,6 +13,9 @@ public:
 	Texture(const char* path, const std::string& directory);
 	Texture(std::vector<std::string> pathes);
 	void Bind(int flag = -1);
+	unsigned int GetTexture();
+	std::string GetType();
+	std::string GetPath();
 
 private:
 	unsigned int id;

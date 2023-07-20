@@ -71,3 +71,15 @@ void Texture::Bind(int flag) {
 	}
 	glBindTexture(GL_TEXTURE_2D, id);
 }
+
+unsigned int Texture::GetTexture() {
+	return id;
+}
+
+std::string Texture::GetType() {
+	return type;
+}
+
+std::string Texture::GetPath() {
+	return path;
+}

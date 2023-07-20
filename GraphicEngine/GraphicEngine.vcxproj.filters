@@ -57,6 +57,9 @@
     <ClCompile Include="Camera\Skybox.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
+    <ClCompile Include="Model\Mesh.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Math\math2.h">
@@ -101,14 +104,17 @@
     <ClInclude Include="Camera\Skybox.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
+    <ClInclude Include="Model\Mesh.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <None Include="shader_directional\directional.fs" />
-    <None Include="shader_directional\directional.vs" />
-    <None Include="shader_point\point.fs" />
-    <None Include="shader_point\point.vs" />
-    <None Include="shader_spot\spot.fs" />
-    <None Include="shader_spot\spot.vs" />
+    <None Include="shaders\shader_directional\directional.fs" />
+    <None Include="shaders\shader_directional\directional.vs" />
+    <None Include="shaders\shader_point\point.fs" />
+    <None Include="shaders\shader_point\point.vs" />
+    <None Include="shaders\shader_spot\spot.fs" />
+    <None Include="shaders\shader_spot\spot.vs" />
     <None Include="shaders\point.fs" />
     <None Include="shaders\point.vs" />
     <None Include="shaders\texture.fs" />
