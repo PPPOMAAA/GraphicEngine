@@ -157,6 +157,7 @@
     <ClCompile Include="Math\vec3.cpp" />
     <ClCompile Include="Math\vec4.cpp" />
     <ClCompile Include="Model\Mesh.cpp" />
+    <ClCompile Include="Model\Transform.cpp" />
     <ClCompile Include="OpenGLWrappers\shaderLoader.cpp" />
     <ClCompile Include="OpenGLWrappers\Texture.cpp" />
     <ClCompile Include="OpenGLWrappers\Vertex_array.cpp" />
@@ -173,6 +174,7 @@
     <ClInclude Include="Math\vec3.h" />
     <ClInclude Include="Math\vec4.h" />
     <ClInclude Include="Model\Mesh.h" />
+    <ClInclude Include="Model\Transform.h" />
     <ClInclude Include="OpenGLWrappers\Shader.h" />
     <ClInclude Include="OpenGLWrappers\shaderLoader.h" />
     <ClInclude Include="OpenGLWrappers\Texture.h" />
