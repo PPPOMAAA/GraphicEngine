@@ -86,16 +86,17 @@
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>
-      </PreprocessorDefinitions>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>C:\Code\Libs\glew\include;C:\Code\Libs\SFML\include;C:\Users\Tea\source\repos\GraphicEngine\GraphicEngine\glm;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Code\Libs\glew\include;C:\Code\Libs\SFML\include;C:\Code\Libs\assimp\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>C:\Code\Libs\SFML\lib;C:\Code\Libs\glew\lib\Release\x64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>opengl32.lib;glew32.lib;sfml-graphics.lib;sfml-system.lib;sfml-window.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>C:\Code\Libs\SFML\lib;C:\Code\Libs\glew\lib\Release\x64;C:\Code\Libs\assimp\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>opengl32.lib;glew32.lib;sfml-graphics.lib;sfml-system.lib;sfml-window.lib;assimp-vc142-mtd.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AddModuleNamesToAssembly>%(AddModuleNamesToAssembly)</AddModuleNamesToAssembly>
+      <DelayLoadDLLs>C:\Code\Libs\assimp\bin\assimp-vc142-mtd.dll</DelayLoadDLLs>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -118,16 +119,17 @@
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>
-      </PreprocessorDefinitions>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>C:\Code\Libs\glew\include;C:\Code\Libs\SFML\include;C:\Users\Tea\source\repos\GraphicEngine\GraphicEngine\glm;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Code\Libs\glew\include;C:\Code\Libs\SFML\include;C:\Code\Libs\assimp\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>C:\Code\Libs\SFML\lib;C:\Code\Libs\glew\lib\Release\x64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>opengl32.lib;glew32.lib;sfml-graphics.lib;sfml-system.lib;sfml-window.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>C:\Code\Libs\SFML\lib;C:\Code\Libs\glew\lib\Release\x64;C:\Code\Libs\assimp\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>opengl32.lib;glew32.lib;sfml-graphics.lib;sfml-system.lib;sfml-window.lib;assimp-vc142-mtd.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AddModuleNamesToAssembly>%(AddModuleNamesToAssembly)</AddModuleNamesToAssembly>
+      <DelayLoadDLLs>C:\Code\Libs\assimp\bin\assimp-vc142-mtd.dll</DelayLoadDLLs>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -157,6 +159,7 @@
     <ClCompile Include="Math\vec3.cpp" />
     <ClCompile Include="Math\vec4.cpp" />
     <ClCompile Include="Model\Mesh.cpp" />
+    <ClCompile Include="Model\Model.cpp" />
     <ClCompile Include="Model\Transform.cpp" />
     <ClCompile Include="OpenGLWrappers\shaderLoader.cpp" />
     <ClCompile Include="OpenGLWrappers\Texture.cpp" />
@@ -174,6 +177,7 @@
     <ClInclude Include="Math\vec3.h" />
     <ClInclude Include="Math\vec4.h" />
     <ClInclude Include="Model\Mesh.h" />
+    <ClInclude Include="Model\Model.h" />
     <ClInclude Include="Model\Transform.h" />
     <ClInclude Include="OpenGLWrappers\Shader.h" />
     <ClInclude Include="OpenGLWrappers\shaderLoader.h" />
@@ -183,6 +187,8 @@
     <ClInclude Include="stb\stb_image.h" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="shaders\model.fs" />
+    <None Include="shaders\model.vs" />
     <None Include="shaders\point.fs" />
     <None Include="shaders\point.vs" />
     <None Include="shaders\skybox.fs" />

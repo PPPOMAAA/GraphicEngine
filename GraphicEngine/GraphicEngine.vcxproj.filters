@@ -63,6 +63,9 @@
     <ClCompile Include="Model\Transform.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
+    <ClCompile Include="Model\Model.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Math\math2.h">
@@ -113,6 +116,9 @@
     <ClInclude Include="Model\Transform.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
+    <ClInclude Include="Model\Model.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="shaders\shader_directional\directional.fs" />
@@ -127,6 +133,8 @@
     <None Include="shaders\texture.vs" />
     <None Include="shaders\skybox.fs" />
     <None Include="shaders\skybox.vs" />
+    <None Include="shaders\model.fs" />
+    <None Include="shaders\model.vs" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="textures\CAPYBARAS.png">

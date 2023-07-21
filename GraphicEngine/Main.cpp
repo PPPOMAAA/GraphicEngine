@@ -5,6 +5,9 @@
 #include <iostream>
 #include <GL/glew.h>
 #include <SFML/Window.hpp>
+#include <assimp/Importer.hpp>
+#include <assimp/scene.h>
+#include <assimp/postprocess.h>
 
 #include "math/math4.h"
 #include "math/vec3.h"
@@ -17,6 +20,7 @@
 #include "OpenGLWrappers/Shader.h"
 #include "OpenGLWrappers/Vertex_array.h"
 #include "OpenGLWrappers/Vertex_buffer.h"
+#include "Model/Model.h"
 
 int height = 1600;
 int width = 900;
@@ -55,6 +59,7 @@ int main() {
 	Shader cube("shaders/texture.vs", "shaders/texture.fs");
 	Shader light("shaders/point.vs", "shaders/point.fs");
 	Shader skybox_shader("shaders/skybox.vs", "shaders/skybox.fs");
+	Shader models("shaders/model.vs", "shaders/model.fs");
 
 	std::vector<std::string> faces{
 		"textures/panorama_0.png",
@@ -68,6 +73,11 @@ int main() {
 	Texture sky(faces);
 	Skybox skybox;
 	skybox.Setup(skybox_shader);
+
+	Model objects[] = {
+		Model("obj/Capybara.obj")
+		// another obj files
+	};
 
 	float vertices[] = {
 		-0.5f, -0.5f, -0.5f,  0.0f,  0.0f, -1.0f, 0.0f, 0.0f,
@@ -228,6 +238,18 @@ int main() {
 		model2 = model2.Translate(pos_light2);
 		light.SetMat4("model", model2);
 		glDrawArrays(GL_TRIANGLES, 0, 36);
+
+		models.Use();
+		models.SetMat4("projection", projection);
+		models.SetMat4("view", view);
+
+		math4 model_one(1.0f);
+		model_one = model_one.Translate(vec3(1.5f, 2.0f, -2.5f));
+		model_one = model_one.Scale(vec3(0.4f));
+		vec3 rotate(1.0f, 0.0f, 0.0f);
+		model_one = model_one.Rotate(90 * 180.0f / M_PI, rotate);
+		models.SetMat4("model", model_one);
+		objects[0].Draw(models);
 
 		lightCubeVAO.Bind();
 
